@@ -13,6 +13,8 @@
 <body>
     <header>
         <h1>Moses</h1>
+        <button onclick="location.href='about.html'">About</button>
+        <button onclick="window.scrollTo(0, document.body.scrollHeight)">Scroll to Bottom</button>
     </header>
 
     <main id="main">
@@ -29,19 +31,22 @@
 
         <section id="pic">
             <figure id="figimg">
-                <img id="img" src="images/moses.jpg" alt="An artistic representation of Moses holding two stone tablets under a sunset sky" style="width:450px; height:auto;">
+                <img id="img" src="images/moses.jpg" alt="An artistic representation of Moses holding two stone tablets under a sunset sky">
                 <figcaption>Moses holds two stone tablets containing the Ten Commandments</figcaption>
             </figure>
         </section>        
 
         <section id="Quote">
             <h3>Quote: A Man Of Humility</h3>
-            <p> <q cite="Exodus 3:11">Who am I that I should go to Phar'aoh and bring the Israelites out of Egypt?</q> <cite>-Moses, Exodus 3:11</cite> </p>
+            <p> 
+                <q cite="Exodus 3:11">Who am I that I should go to Phar'aoh and bring the Israelites out of Egypt?</q> 
+                <cite>-Moses, Exodus 3:11</cite> 
+            </p>
         </section>
         
         <section id="video">
             <h3>Video</h3>
-            <iframe width="720" height="480" src="https://www.youtube.com/embed/OqCTq3EeDcY" title="Moses Parts the Sea - The Ten Commandments (6/10) Movie CLIP (1956) HD" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>"
+            <iframe src="https://www.youtube.com/embed/OqCTq3EeDcY" title="Moses Parts the Sea - The Ten Commandments (6/10) Movie CLIP (1956) HD" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </section>
     </main>
 
@@ -55,7 +60,7 @@
             </ul>
             
         </section>
-        
+
         <section id="contact">
             <h3>Contact Us</h3>
             <form method="post" id="email_form" action="subscribe.php">
@@ -76,7 +81,7 @@
                 </select>
                 <br>
                 <div class="form-buttons">
-                    <button type="submit" class="form-control">submit</button>
+                    <button type="submit" class="form-control">Submit</button>
                     <button type="reset" class="form-control">Clear</button>
                 </div>
     
@@ -85,7 +90,8 @@
     </aside>
         
     <footer>
-        <p>Alec De Angelis &copy; 2025</p> 
+        <p>Alec De Angelis &copy; 2025</p>
+        <button onclick="window.scrollTo(0, 0)">Scroll to Top</button>
     </footer>
 </body>
 </html>

@@ -1,23 +1,225 @@
-/*Alec De Angelis 9039870*/
+/* Alec De Angelis 9039870 */
 
-p{
-    color : green;
-    font-weight: bold;
+html {
+    font: bold normal normal 20px/1.5 Arial, Helvetica, sans-serif;
+    background-color: rgba(255, 243, 205, 0.873);
 }
-section {
-    border: orange 8px solid;
-    padding: 10px;
+
+header, footer {
+    background-image: linear-gradient(rgba(255, 88, 88, 0.6), rgba(255, 240, 181, 0.888));
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+h1 {
+    color: darkblue;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: left;
+    margin: 0.5rem;
+}
+
+h2, h3, h4 {
+    font-variant: petite-caps;
+    color: green;
+    text-align: center;
+}
+p{
+    color : darkslateblue;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 0.5rem;
+}
+header, main, aside, footer {
+    margin-bottom: 1rem;
+}
+footer {
+    clear : both;
+    background-image: linear-gradient(rgba(255, 240, 181, 0.888), rgba(255, 88, 88, 0.6));
+    border-radius: 1rem;
+    font-size: 0.8rem;
+}
+body {
+    background-color: rgba(255, 240, 181, 0.888);
+    max-width: 1200px;
+    width: 60%;
+    padding: 1rem;
+    margin: 1rem auto;
+    border: .2rem rgba(82, 82, 82, 0.488) solid;
+    border-radius: 1rem;
+}
+main section {
+    border-radius: 1rem;
+    padding: 1rem;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+main {
+    border-radius: 1rem;
+    float: left;
+    width: 64%; /*I could only set this to 63% before the aside would fall to the bottom of the page, I'm not sure why. Margins/padding probably too large.*/
+    border: 0.5rem solid orange;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 aside {
-    border: blue 8px solid; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    float: right;
+    width: 30%;
+    /* margin-top: 0.5rem; *//*Removed to line aside up with main top edge*/
+    margin-bottom: 1rem;
 }
-#pic {
-    border: aquamarine 8px solid;
-    padding: 10px;
+aside section {
+    border: 0.3rem solid grey;
+    border-radius: .5rem;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#figimg {
+    border: 1rem solid aquamarine;
+    border-radius: .5rem;
+    padding: .5rem;
+    margin: .2rem;
+    text-align: center;
+    background-color: lightyellow;
+}
+#img {
+    border: 0.2rem solid rgb(127, 255, 148); /* Border shorthand declaration */
+    border-radius: .5rem;
+    margin: 1rem auto;
+    width: 80%;
+    height:auto;
 }
 #Bio {
-    background-color: beige;
+    background-color: rgb(255, 248, 185);
 }
-a:hover {
-    color: purple;
+#Quote {
+    width: 80%;
+    border: .5rem solid black;
+    border-radius: 1rem;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.5), -1rem 0 1rem rgba(0, 0, 0, 0.5); /*3 side box shadow doesn't look good but the assignment asks for it so I'll just mutter here like an old man*/
+    clear: both;
+    background-color: #fffaf0;
+    padding: 1rem;
+    margin: 1rem auto;
+}
+
+/* q {
+    width: 80%;
+    border: 1rem solid black;
+    border-radius: 1rem;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.5);
+    clear: both;
+    background-color: #fffaf0;
+    padding: 1rem;
+    margin: 1rem auto;
+    Targeting #Quote directly instead of q tag fixed incorrect borders displaying. I probably messed something up with it.
+} */
+
+#video {
+    border-radius: .6rem;
+    border: 0.3rem solid black; /*Pretty sure this is correct border shorthand*/
+    background-color: lightskyblue;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+#video iframe { /*Set iframe width in css so it adheres to @media changes.*/
+    width: 100%;
+    height: 20rem;
+    border-radius: inherit;
+    box-sizing: border-box;
+}
+ul {
+    list-style-type: none;
+    color: rgb(0, 134, 151);
+    line-height: 1.8;
+    font-size: 1.1rem;
+    text-align: left;
+    padding-left: 0;
+    a:hover {
+        color: rgb(233, 109, 0);
+    }
+    text-decoration: none;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+#email_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#email_form input[type="text"],
+#email_form input[type="email"],
+#email_form input[type="tel"],
+#email_form select {
+    width: 80%;
+    padding: .3rem;
+    margin: 0.1rem 0;
+    border-radius: .2rem;
+}
+
+#email_form .form-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+#email_form .form-buttons button {
+    width: 48%;
+    margin: 0.1rem 1%;
+    border-radius: .3rem;
+}
+
+header button, footer button {
+    width: auto;
+    margin: 0.1rem 1%;
+    border-radius: .3rem;
+    padding: .3rem;
+}
+
+@media (max-width: 900px) {
+    html {
+        font-size: 12px;
+    }
+    aside, main {
+        width: 100%;
+        float: none;
+        margin: 0;
+    }
+    body {
+        width: 100%;
+        padding: 0.5rem;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    header, footer {
+        margin: 0;
+        border-radius: 0;
+    }
+    #Quote {
+        width: 100%;
+        margin: 0;
+        box-shadow: none;
+    }
+    #video {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    }
+    h2, h3, h4 {
+        font-size: 1.5rem;
+    }
+    header button, footer button, #email_form .form-buttons button {
+        width: 100%; /* Make buttons larger */
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
 }
